@@ -19,9 +19,8 @@ get "/contacts" do
   erb :index
 end
 get "/update" do
-  @contacts = Contact.where(email: 'lboyle@uog.com')
-  contacts.update(email: 'devaki.swami@genpact.com')
-  erb :index
+  contact = Contact.where(email: 'lboyle@uog.com')
+  contact.update(email: 'devaki.swami@genpact.com')
 end
 
 get "/create" do
