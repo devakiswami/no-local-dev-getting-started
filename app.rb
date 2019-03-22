@@ -19,6 +19,19 @@ get "/contacts" do
   erb :index
 end
 
+get "/updateContact" do
+  @con = Contact.where(email: 'sean@edge.com')
+  con.update(email: 'devakinandan@gmail.com')  
+end
+
+get "/createContact" do
+  Contact = Contact.new do |con|
+  con.firstname = "David"
+  con.lastname = "mash"
+  con.email= "david.mash@gmail.com"
+ end
+end
+
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
   match = /(.*?)\.herokuapp\.com/.match(request.host)
