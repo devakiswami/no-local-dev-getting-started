@@ -20,8 +20,8 @@ get "/contacts" do
 end
 
 get "/delete" do
-  contact = Contact.where(email: 'lboyle@uog.com')
-  contact.destroy
+  Contact.where(email: 'lboyle@uog.com').destroy
+  
 end
 
 get "/create" do
