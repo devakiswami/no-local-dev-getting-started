@@ -18,9 +18,10 @@ get "/contacts" do
   @contacts = Contact.all
   erb :index
 end
-get "/update" do
+
+get "/delete" do
   contact = Contact.where(email: 'lboyle@uog.com')
-  contact.update(email: 'devaki.swami@genpact.com')
+  contact.destroy
 end
 
 get "/create" do
