@@ -18,7 +18,7 @@ get "/contacts" do
   @contacts = Contact.all
   erb :index
 end
-get "/contacts" do
+get "/update" do
   @contacts = Contact.where(email: 'lboyle@uog.com')
   erb :index
 end
